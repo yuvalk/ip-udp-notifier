@@ -1,0 +1,13 @@
+[unit]
+Description=send host ip over udp
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=180
+StartLimitIntervalSec=0
+ExecStart=/usr/local/bin/ip-udp-notifier.sh
+
+[Install]
+WantedBy=multi-user.target
